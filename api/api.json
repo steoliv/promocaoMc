@@ -1,0 +1,28 @@
+{
+    "produtos" : [
+        {
+            "codigo": 601121,
+            "nome": "Medialuna + Café Espresso 50 ml",
+            "imagem_h": "medialuna-h.png",
+            "imagem_v": "medialuna-v.png",
+            "preco": "16",
+            "centavos": "90"
+        },
+        {
+            "codigo": 601224,
+            "nome": "Folhado com Tomate e Queijo   + Smoothie de Uva 400 ml",
+            "imagem_h": "folhado-h.png",
+            "imagem_v": "folhado-v.png",
+            "preco": "22",
+            "centavos": "90"       
+        },
+        {
+            "codigo": 600198,
+            "nome": "Waffle de Pão de Queijo + Café Chantilly",
+            "imagem_h": "waffle-h.png",
+            "imagem_v": "waffle-v.png",
+            "preco": "21",
+            "centavos": "90"
+        }
+    ]
+}

@@ -1,0 +1,286 @@
+@font-face {
+    font-family: 'Speedee';
+    src: url('../fonts/Speedee.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Speedee Regular';
+    src: url('../fonts/Speedee_Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Speedee Conden';
+    src: url('../fonts/SpeedeeCd.ttf') format('truetype');
+}
+
+body{
+    color: #461e00;
+    padding: 0px 50px;
+    background-size: 100%;
+    background-repeat: round;
+}
+
+.header{
+    align-items: center;
+    gap: 142px;
+
+    .header-logo{
+        width: 321px;
+        margin: auto;
+        
+        > img{
+        width: 100%;
+        animation: zoomImg  5s;
+        }
+    }
+
+    h1{
+        font-family: 'Speedee', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+}
+
+.items-item{
+    position: relative;
+    max-width: 500px;
+
+    img{
+        width: 470px;
+    }
+}
+
+.item-info {
+    position: absolute;
+
+    > p{
+        font-family: 'Speedee', sans-serif;
+        line-height: 0.95;
+        font-size: 37.8px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+}
+
+.item-0, .item-1, .item-2{
+    img{
+        animation: zoomImg  5s ;
+    }
+}
+
+.item-preco{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 140px;
+
+    > .item-preco-diferente{
+        font-weight: bold;
+        grid-area: 1 / 2 / 3 / 3; 
+    }
+    
+    > .item-preco-sifrao { 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    
+    > .item-preco-centavos { 
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+    
+    > .item-preco-texto { 
+        grid-area: 2 / 3 / 3 / 4; 
+        font-size: 11px;
+        text-align: center;
+        margin-right: 10px;
+    }
+}
+
+
+
+.item-preco-sifrao, .item-preco-diferente, .item-preco-centavos{
+    font-family: 'Speedee Conden', sans-serif;
+}
+
+
+footer{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1080px){
+    body{
+        background-image: url('../images/Fundo-mobile.png');
+    }
+    
+    .header{
+        display: block;
+        text-align: center;
+        padding-top: 57px;
+        
+        h1{
+            font-size: 82.64px;
+        }
+    }
+    
+    .items {
+        grid-column-gap: 0px;
+        margin-top: 50px;
+    }
+    
+    .item-0 { 
+        grid-area: 1 / 2 / 2 / 4;
+        
+        > .item-info{
+            left: 100px;
+            bottom: 160px;
+        } 
+
+        img{
+            width: 100%;
+            margin-left: 27%;
+        }
+    }
+    
+    .item-1 { 
+        grid-area: 2 / 1 / 3 / 3;
+        
+        > .item-info{
+            left: 56px;
+            bottom: 220px;
+        } 
+        
+        img{
+            margin-left: 28%;
+            margin-top: 40px;
+        }
+    }
+    
+    .item-2 { 
+        grid-area: 3 / 2 / 4 / 4;
+        
+        > .item-info{
+            left: 184px;
+            bottom: 156px;
+        } 
+        
+        img{
+            width: 100%;
+            margin-left: 25%;
+        }
+    }
+    
+    .item-preco{
+        
+        > .item-preco-sifrao { 
+            font-size: 55px;
+        }
+        
+        > .item-preco-diferente { 
+            font-size: 90px;
+        }
+        
+        > .item-preco-texto{
+            margin-top: -17px;
+        }
+    }
+
+    footer {
+        display: block;
+        position: relative;
+
+        img{
+            width: 100px;
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+        }
+    }
+}
+
+@media (min-width: 1081px) {
+    body{
+        background-image: url('../images/Fundo.png');
+    }
+
+    .header, footer{
+        display: flex;
+    }
+
+    .header{
+        gap: 142px;
+        font-size: 86px;
+    }
+
+    .items {
+        margin-top: 117px;
+    }
+
+    .item-0 { 
+        grid-area: 1 / 1 / 3 / 2; 
+    
+        .item-info{
+            bottom: 340px;
+            left: 197px;
+        }
+    }
+    
+    .item-1 { 
+        grid-area: 2 / 2 / 4 / 3;
+        
+        .item-info{
+            max-width: 295px;
+            bottom: 260px;
+            left: 187px;
+        }
+    }
+    
+    .item-2 { 
+        grid-area: 1 / 3 / 3 / 4; 
+    
+        .item-info{
+            max-width: 252px;
+            bottom: 215px;
+            left: 210px;
+        }
+    }
+
+    .item-preco{
+        > .item-preco-diferente{
+            font-size: 60px;
+        }
+
+        > .item-preco-sifrao { 
+            font-size: 45px;
+        }
+    
+        > .item-preco-texto { 
+            margin-top: -8px;
+        }
+    }
+
+    footer{     
+        align-items: end;
+        gap: 125px;
+    
+        img{
+            width: 100px;
+        }
+    }
+}
+
+@keyframes zoomImg{
+    0% {
+     width: 0px;
+   }
+    100% {
+     width: 100%;
+   }
+ }
